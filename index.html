@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <style media="screen">
+      body{
+        font-family: arial;
+      }
+      .instructions{
+        color: gray;
+      }
+      .message-a{
+        color: purple;
+      }
+    </style>
+  </head>
+  <body ng-app="planeptune">
+    <div class="instructions">
+      <h2>
+        This example is using neptune controller as parent of nepJr controller, so just need o use &scope dependecy.
+      </h2>
+    </div>
+    <div ng-controller="neptuneCtrl">
+      <label for="message">Hey!</label>
+      <input ng-model="msg">
+      <button ng-click="yell(msg);">yell</button>
+    <!-- </div> -->
+
+
+
+    <div ng-controller="nepgearCtrl">
+      <h3>NepJr hear: <span class="message-a">{{message}}</span>!</h3>
+    </div>
+</div>
+
+
+
+  </body>
+</html>
+
+
+<script type="text/javascript">
+  var app = angular.module('planeptune',[]);
+
+
+  app.controller('neptuneCtrl',neptuneCall);
+  app.controller('nepgearCtrl', nepgearHear);
+
+  function neptuneCall($scope){
+    $scope.yell = function(msg){
+      $scope.$broadcast('nepCall',{message : msg});
+
+    }
+  }
+
+  function nepgearHear($scope){
+    $scope.$on('nepCall', function (event, args){
+        $scope.message = args.message;
+        console.log($scope.message);
+    });
+  }
+
+</script>
