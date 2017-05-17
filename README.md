@@ -1,9 +1,9 @@
 # Angular 1 examples of $broadcast and $on  
 
-I'm creating this examples for learn about the comunication bewten controllers, I'm working two scenarios
+I'm creating this examples for learn about the comunication between controllers, I'm working two scenarios
 
-* parent controller --> child controller 1
-* independent controller <--> independent controller 2
+* parent controller --> child controller 
+* independent controller <--> independent controller 
 
 ## parent-->child
 this looks like this....
