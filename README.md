@@ -39,3 +39,8 @@ this looks like this....
 
 ![rootScope](http://www.dotnettricks.com/img/angularjs/emit-broadcast.png)
 
+## .factory()
+We can create services with factories using the $broadcast for create instances on other controllers
+### [check the factory and controller exmaples here](https://github.com/abelardogg/ng-1-broadcast/blob/master/app/test-controller.js)
+### and you can check the view code on the [index.html file](https://github.com/abelardogg/ng-1-broadcast/blob/master/index.html)
+
