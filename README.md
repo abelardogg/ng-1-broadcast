@@ -37,6 +37,5 @@ this looks like this....
 
 ## $rootScope
 
-http://www.dotnettricks.com/img/angularjs/emit-broadcast.png
-
+![rootScope](http://www.dotnettricks.com/img/angularjs/emit-broadcast.png)
 
