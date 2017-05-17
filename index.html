@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="gameindustry">
+  <head>
+    <meta charset="utf-8">
+    <title>factory</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <script src="app/test-controller.js" charset="utf-8"></script>
+
+    <style media="screen">
+        body{
+          font-family: arial;
+        }
+        .card:{
+          border: 1px solid black;
+          margin: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="cpuCtrl">
+      <h1>gameindustry</h1>
+      <div ng-repeat="c in cpus">
+        <p>{{c.data.id}}</p>
+        <p>{{c.name}}</p>
+        <p>{{c.color}}</p>
+        <p>{{c.country}}</p>
+      </div>
+    </div>
+
+    <!-- <div ng-controller="descriptionCtrl">
+
+    </div> -->
+
+
+  </body>
+</html>

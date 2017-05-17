@@ -1,0 +1,26 @@
+[
+  {
+    "id":1,
+    "name":"neptune",
+    "color":"purple",
+    "country":"planeptune"
+  },
+  {
+    "id":2,
+    "name":"noir",
+    "color":"black",
+    "country":"lastation"
+  },
+  {
+    "id":3,
+    "name":"vert",
+    "color":"green",
+    "country":"leanbox"
+  },
+  {
+    "id":4,
+    "name":"blanc",
+    "color":"white",
+    "country":"lowee"
+  }
+]
