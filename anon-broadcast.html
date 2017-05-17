@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>same broadcast</title>
+    <title></title><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <style media="screen">
+      body{
+        font-family: arial;
+      }
+      .instructions{
+        color: gray;
+      }
+      .message-a{
+        color: purple;
+      }
+    </style>
+  </head>
+  <body ng-app="gameindustry">
+    <div ng-controller="neptuneCtrl">
+      <input ng-model="msg"> <button ng-click="yelling(msg);">scream!!!</button>
+    </div>
+
+    <div ng-controller="partyCtrl">
+      <h1>party hear: {{message}}</h1>
+    </div>
+
+  </body>
+</html>
+<script type="text/javascript">
+  var app = angular.module('gameindustry',[]);
+
+  app.controller('neptuneCtrl', neptune);
+  app.controller('partyCtrl', party);
+
+  function neptune($rootScope){
+    $rootScope.yelling = function(msg){
+      $rootScope.$broadcast('nepScream',{message:msg});
+    }
+  }
+
+  function party($scope){
+    $scope.$on('nepScream', function(event, args){
+      $scope.message = args.message;
+      console.log($scope.message);
+    });
+  }
+
+
+
+</script>
